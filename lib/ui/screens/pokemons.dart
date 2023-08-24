@@ -37,26 +37,26 @@ class PokemonsPage extends StatelessWidget {
               );
             }
             if (!state.loading && !state.loaded) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Error occurred.',
-                    style: Theme.of(context)
-                        .textTheme
-                        .displaySmall
-                        ?.copyWith(color: Theme.of(context).colorScheme.error),
-                  ),
-                  const SizedBox(
-                    height: 32,
-                  ),
-                  TextButton(
-                      onPressed: () => context
-                          .read<PokemonsCubit>()
-                          .load()
-                          .then((value) => null),
-                      child: const Text('Try Again'))
-                ],
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Error occurred.',
+                      style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                          color: Theme.of(context).colorScheme.error),
+                    ),
+                    const SizedBox(
+                      height: 32,
+                    ),
+                    TextButton(
+                        onPressed: () => context
+                            .read<PokemonsCubit>()
+                            .load()
+                            .then((value) => null),
+                        child: const Text('Try Again'))
+                  ],
+                ),
               );
             }
             return Column(
