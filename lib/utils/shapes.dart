@@ -8,6 +8,7 @@ enum AppShape {
   circle,
   roundedSquare;
 
+  ///[size] parameter is used to make the border radius relative to the shape size
   BoxDecoration decoration(double size) {
     switch (this) {
       case AppShape.square:

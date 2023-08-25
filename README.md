@@ -41,3 +41,7 @@ where id is the index of the pokemon +1 but this way has problem id of pokemon f
   ]
 }
 ```
+
+## contact
+
+**Email**: <galeab121@gmail.com>
